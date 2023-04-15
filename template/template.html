@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+    <title>[Titul stránky]</title>
+  </head>
+
+  <body>
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-bold text-center my-4">[Titul stránky]</h1>
+      <form id="form" class="max-w-lg mx-auto">
+        <!-- [HTML Formuláře] -->
+        <button id="generate" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Vygenerovat</button>
+      </form>
+      <textarea rows="15" id="result" class="flex my-4 w-full max-w-lg mx-auto"></textarea>
+    </div>
+    
+    <script id="settings" type="application/json" src="settings.json"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
