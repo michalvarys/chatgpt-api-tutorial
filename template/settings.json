@@ -1,0 +1,4 @@
+{
+    "token": "[OpenAI Token]",
+    "system_message": "Chovej se jako profesionální copywriter a vytvoř mi perfektní příspěvek na sociální síť {social_media}. Délka {length}"
+}
