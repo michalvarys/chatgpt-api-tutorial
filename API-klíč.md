@@ -1,21 +1,20 @@
 ## Registrace OpenAI
 
-- Přejděte na webové stránky OpenAI: https://openai.com/ 
-- Klikněte na tlačítko "Sign up" na horní liště
+- Přejděte na webové stránky OpenAI: https://platform.openai.com/ 
+- Klikněte na tlačítko "Sign up"
 - Vyplňte své údaje do registračního formuláře.
-- Stiskněte tlačítko "Create Account", aby jste se zaregistrovali.
+- Stiskněte tlačítko `Continue`
+- Na email vám přijde potvrzení ve kterém klikněte na tlačítko k dokončení registrace
 
+![image](https://user-images.githubusercontent.com/211430/232253454-5ce4a5cf-3d94-443f-a543-b4b34ef872b1.png)
 
 
 ## Získání API Klíče
 Abychom mohli pracovat s ChatGPT API, budeme potřebovat vytvořit token.
 - v pravém horním rohu klikněte na View API keys nebo klikněte [zde](https://platform.openai.com/account/api-keys) 
 - klikněte na tlačítko `Create new secret key`
-
-![image](https://user-images.githubusercontent.com/211430/232252090-14a1aa49-654e-40be-b76c-003e552af6bf.png)
 - zadejte jméno klíče (libovolné) a klikněte na zelené tlačítko `Create secret key`
-
-![image](https://user-images.githubusercontent.com/211430/232252128-87378b88-4cf6-480a-89a3-bf0edfcfbc10.png)
 - tento klíč si zkopírujte a uložte
 
-![image](https://user-images.githubusercontent.com/211430/232251933-a75f65b2-cd1c-41cf-bcd7-5799a7b9c7ca.png)
+![image](https://user-images.githubusercontent.com/211430/232253755-ae48cc25-b0ef-487d-9283-0ff5d89aef58.png)
+
