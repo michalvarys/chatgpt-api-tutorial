@@ -61,7 +61,6 @@ async function loadJSON(elementId) {
 
 async function initApp() {
   await loadSettings();
-  console.log(process.env.OPENAI_TOKEN);
 
   const form = getForm();
   if (!form) {
