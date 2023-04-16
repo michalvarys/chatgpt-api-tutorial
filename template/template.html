@@ -3,22 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
     <title>[Titul stránky]</title>
   </head>
 
   <body>
+    
     <div class="container mx-auto">
-      <h1 class="text-3xl font-bold text-center my-4">[Titul stránky]</h1>
-      <form id="form" class="max-w-lg mx-auto">
-        <!-- [HTML Formuláře] -->
-        <button id="generate" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Vygenerovat</button>
-      </form>
-      <textarea rows="15" id="result" class="flex my-4 w-full max-w-lg mx-auto"></textarea>
+        <h1 class="text-3xl font-bold text-center my-4">[Titul stránky]</h1>
+        <form id="form" class="max-w-lg mx-auto">
+          <!-- [HTML Formuláře] -->
+          <button id="generate" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Vygenerovat</button>
+        </form>
+        <textarea rows="15" id="result" class="flex my-4 w-full max-w-lg mx-auto"></textarea>
     </div>
     
     <script id="settings" type="application/json" src="settings.json"></script>
     <script src="index.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
