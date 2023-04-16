@@ -1,4 +1,10 @@
 {
-    "token": "[OpenAI Token]",
-    "system_message": "Chovej se jako profesionální copywriter a vytvoř mi perfektní příspěvek na sociální síť {social_media}. Délka {length}"
+  "token": "[OpenAI Token]",
+  "system_message": "Vytvoř návrh marketingové kampaně pomocí metody 'Scannable Content', který vytvoří obsah, který je snadno prohlédnutelný a rychle čitelný pro [zákazník]. Zahrňte jasné nadpisy, odrážky a krátké odstavce, aby byl obsah přehlednější a účinnější.",
+  "model": "gpt-3.5-turbo",
+  "n": 1,
+  "max_tokens": 2048,
+  "temperature": 0.5,
+  "frequency_penalty": 0.5,
+  "presence_penalty": 0.5
 }

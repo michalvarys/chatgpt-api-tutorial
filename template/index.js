@@ -1,68 +1,50 @@
-const form = document.querySelector("#form");
-const result = document.querySelector("#result");
-
 let systemMessage = "";
 
-let settings = { system_message: "", token: "" };
+let settings = {
+  system_message: "",
+  token: "",
+  n: 1,
+  max_tokens: 2048,
+  temperature: 0.5,
+  frequency_penalty: 0.5,
+  presence_penalty: 0.5,
+};
+
 async function loadSettings() {
   settings = await loadJSON("settings");
   return settings;
 }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+function getForm() {
+  return document.querySelector("#form") || document.querySelector("form");
+}
+
+function formatMessage(message) {
+  const form = getForm();
   const values = new FormData(form);
-  const length = values.get('length');
-  const description = values.get('description');
-
-  const params = {
-    model: "gpt-3.5-turbo",
-    max_tokens:
-      length === "short" ? 200 : length === "medium" ? 500 : 2000,
-    messages: [
-      {
-        role: "system",
-        content:  formatMessage(settings.system_message)
-      },
-      {
-        role: "user",
-        content: description,
-      },
-    ],
-  };
-  generateText(params);
-});
-
-function formatMessage(message){
-    const values = new FormData(form);
-    return message.replace(/{\w+}/g, (match) => values.get(match.slice(1, -1)))
+  return message.replace(/{\w+}/g, (match) => values.get(match.slice(1, -1)));
 }
 
 async function generateText(params) {
-    const data = await sendChatRequest(params)
-    result.innerHTML = data.choices[0].message.content
+  const data = await sendChatRequest(params);
+  const result = document.querySelector("#result");
+  result.innerHTML = data.choices[0].message.content;
 }
 
-async function sendChatRequest({ messages, max_tokens, model, n = 1 }) {
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${settings.token}`,
-      },
-      body: JSON.stringify({
-        model,
-        messages,
-        max_tokens,
-        temperature: 0.5,
-        n
-      })
-    });
-  
-    const data = await response.json();
-    return data;
+async function sendChatRequest(body) {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${settings.token}`,
+    },
+    body: JSON.stringify(body),
+  });
+
+  const data = await response.json();
+  return data;
 }
-  
+
 async function loadJSON(elementId) {
   let json = {};
   try {
@@ -77,7 +59,47 @@ async function loadJSON(elementId) {
   return json;
 }
 
-async function initApp(){
-  await loadSettings()
+async function initApp() {
+  await loadSettings();
+  console.log(process.env.OPENAI_TOKEN);
+
+  const form = getForm();
+  if (!form) {
+    return alert("Nebyl nalezen žádný formulář");
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const values = new FormData(form);
+    const description = values.get("description");
+
+    const {
+      model,
+      max_tokens,
+      n,
+      temperature,
+      frequency_penalty,
+      presence_penalty,
+      system_message,
+    } = settings;
+
+    generateText({
+      model,
+      max_tokens,
+      n,
+      temperature,
+      frequency_penalty,
+      presence_penalty,
+      messages: [
+        {
+          role: "system",
+          content: formatMessage(system_message),
+        },
+        {
+          role: "user",
+          content: description,
+        },
+      ],
+    });
+  });
 }
-initApp()
+initApp();

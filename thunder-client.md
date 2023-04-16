@@ -35,5 +35,5 @@ K nastavení dotazu ChatGPT API budeme potřebovat následující 4 kroky
 upravte hodnotu `content` u role `system` pro nastavení role bota
 a role `user` pro váš příkaz
 
-Po odeslání se zobrazí data, která
+Po odeslání se zobrazí data, které vrátila API
 ![image](https://user-images.githubusercontent.com/211430/232328759-942a883d-cc78-4af0-b6aa-cc833ea51e4c.png)
