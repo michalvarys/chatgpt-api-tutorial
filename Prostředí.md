@@ -7,8 +7,6 @@ Zde je postup, jak nainstalovat VSCode:
 
 
 ## Instalace rozšíření pro VSCode
-Nyní si nainstalujte rozšíření `ChatGPT - Genie AI`, `Live Server` a `Thunder Client`
-
 1. Otevřete VSCode.
 2. Klikněte na tlačítko "Extensions" v bočním panelu nebo stiskněte klávesovou zkratku `Ctrl+Shift+X` (Windows) nebo `Cmd+Shift+X` (Mac).
 3. Do vyhledávacího pole napište jméno rozšíření (např. "ChatGPT - Genie") a klikněte na tlačítko "Install".
