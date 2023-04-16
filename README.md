@@ -5,3 +5,4 @@
 - [Získání API klíče](/API-klíč.md#získání-api-klíče)
 - [Zveřejnění aplikace](/deploy-aplikace.md)
 - <a href="https://platform.openai.com/playground?mode=chat" target="_blank">Playground ChatGPT API</a>
+- [Dotaz přes Thunder Client](/thunder-client.md)
