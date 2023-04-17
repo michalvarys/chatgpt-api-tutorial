@@ -69,7 +69,16 @@ async function askQuestion(answerElementId = "answer") {
   const form = document.getElementById("form");
   const values = formToMap(form);
   const messages = formattedMessages(values);
-  const max_tokens = values.max_tokens ? Number(values.max_tokens) : 1024;
+  
+  const {
+    model,
+    n,
+    temperature,
+    frequency_penalty,
+    presence_penalty,
+  } = settings;
+  
+  const max_tokens = values.max_tokens ? Number(values.max_tokens) : settings.max_tokens || 1024;
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -77,11 +86,13 @@ async function askQuestion(answerElementId = "answer") {
       Authorization: `Bearer ${settings.token}`,
     },
     body: JSON.stringify({
-      model: "gpt-3.5-turbo",
-      n: 1,
+      model,
+      n,
       messages,
       max_tokens,
-      //temperature: 0.3
+      temperature,
+      frequency_penalty,
+      presence_penalty
     }),
   });
 
