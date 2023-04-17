@@ -47,13 +47,17 @@ async function loadSettings() {
 function formattedMessages(values) {
   let { messages } = settings;
 
-  if (values.prompt) {
+  if (values.prompt || values.system) {
     messages = [
-      {
+      values.system && {
+        role: "system",
+        content: values.system,
+      },
+      values.prompt && {
         content: values.prompt,
         role: "user",
       },
-    ];
+    ].filter(Boolean)
   }
 
   return messages.map((message) => {
