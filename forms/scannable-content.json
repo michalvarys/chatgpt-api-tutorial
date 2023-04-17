@@ -1,0 +1,28 @@
+[
+    {
+      "type": "header",
+      "subtype": "h1",
+      "label": "Marketingová Kampaň - Scannable Content"
+    },
+    {
+      "type": "text",
+      "required": false,
+      "label": "Popis ideálního zákazníka",
+      "className": "form-control",
+      "name": "description",
+      "subtype": "text"
+    },
+    {
+      "type": "button",
+      "subtype": "submit",
+      "label": "Odeslat",
+      "className": "btn-primary btn",
+      "name": "submit",
+      "style": "primary"
+    },
+    {
+      "type": "hidden",
+      "name": "prompt",
+      "value": "Vytvoř návrh marketingové kampaně pomocí metody 'Scannable Content', který vytvoří obsah, který je snadno prohlédnutelný a rychle čitelný pro {description}. Zahrňte jasné nadpisy, odrážky a krátké odstavce, aby byl obsah přehlednější a účinnější."
+    }
+  ]

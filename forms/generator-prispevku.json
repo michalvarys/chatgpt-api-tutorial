@@ -1,0 +1,98 @@
+[
+    {
+      "type": "header",
+      "subtype": "h2",
+      "label": "Generátor příspěvků"
+    },
+    {
+      "type": "select",
+      "required": true,
+      "label": "Sociální síť",
+      "className": "form-control",
+      "name": "social_media",
+      "multiple": false,
+      "values": [
+        {
+          "label": "Facebook",
+          "value": "Facebook",
+          "selected": true
+        },
+        {
+          "label": "Youtube",
+          "value": "Youtube",
+          "selected": false
+        },
+        {
+          "label": "Instagram",
+          "value": "Instagram",
+          "selected": false
+        },
+        {
+          "label": "Twitter",
+          "value": "Instagram",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "required": true,
+      "label": "Popis",
+      "className": "form-control",
+      "name": "description",
+      "subtype": "textarea"
+    },
+    {
+      "type": "select",
+      "required": true,
+      "label": "Tón",
+      "className": "form-control",
+      "name": "tone",
+      "multiple": false,
+      "values": [
+        {
+          "label": "Profesionální",
+          "value": "Profesionální",
+          "selected": true
+        },
+        {
+          "label": "Kreativní",
+          "value": "Kreativní",
+          "selected": false
+        },
+        {
+          "label": "Naštvaný",
+          "value": "Naštvaný",
+          "selected": false
+        },
+        {
+          "label": "Sarkastický",
+          "value": "Sarkastický",
+          "selected": false
+        },
+        {
+          "label": "Smutný",
+          "value": "Smutný",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "type": "hidden",
+      "name": "system",
+      "value": "Jsi profesionální copywriter a skvělý vypravěč. Máš za úkol vytvořit {tone} příspěvek na sociální síť {social_media}."
+    },
+    {
+      "type": "hidden",
+      "name": "prompt",
+      "value": "{description}"
+    },
+    {
+      "type": "button",
+      "subtype": "submit",
+      "label": "Odeslat",
+      "className": "btn-primary btn",
+      "name": "submit",
+      "style": "primary"
+    }
+  ]

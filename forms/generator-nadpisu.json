@@ -1,0 +1,63 @@
+[
+    {
+      "type": "header",
+      "subtype": "h2",
+      "label": "Generátor nadpisů"
+    },
+    {
+      "type": "textarea",
+      "required": true,
+      "label": "Popis",
+      "className": "form-control",
+      "name": "description",
+      "subtype": "textarea"
+    },
+    {
+      "type": "select",
+      "required": true,
+      "label": "Tón",
+      "className": "form-control",
+      "name": "tone",
+      "multiple": false,
+      "values": [
+        {
+          "label": "Profesionální",
+          "value": "Profesionální",
+          "selected": true
+        },
+        {
+          "label": "Kreativní",
+          "value": "Kreativní",
+          "selected": false
+        },
+        {
+          "label": "Naštvaný",
+          "value": "Naštvaný",
+          "selected": false
+        },
+        {
+          "label": "Sarkastický",
+          "value": "Sarkastický",
+          "selected": false
+        },
+        {
+          "label": "Smutný",
+          "value": "Smutný",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "subtype": "submit",
+      "label": "Odeslat",
+      "className": "btn-primary btn",
+      "name": "submit",
+      "style": "primary"
+    },
+    {
+      "type": "hidden",
+      "name": "prompt",
+      "value": "Jsi profesionální copywriter a máš za úkol vytvořit {tone} nadpis. Zde jsou další informace: {description}"
+    }
+  ]
